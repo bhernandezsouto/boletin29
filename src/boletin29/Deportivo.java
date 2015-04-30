@@ -11,5 +11,33 @@ package boletin29;
  */
 public class Deportivo extends Barco {
     private float potencia;
+    private float precioPo;
 
+    public Deportivo(float potencia, float precioPo, int diasDeOcupacion, float longitud, String matricula, float alquiler) {
+        super(diasDeOcupacion, longitud, matricula, alquiler);
+        this.potencia = potencia;
+        this.precioPo = precioPo;
+    }
+
+    public float getPotencia() {
+        return potencia;
+    }
+
+    public void setPotencia(float potencia) {
+        this.potencia = potencia;
+    }
+
+    public float getPrecioPo() {
+        return precioPo;
+    }
+
+    public void setPrecioPo(float precioPo) {
+        this.precioPo = precioPo;
+    }
+
+    @Override
+    public void modulo() {
+        alquiler=(float)(super.alquiler()+(precioPo*potencia));
+    }
+    
 }
