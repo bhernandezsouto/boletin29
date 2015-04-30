@@ -5,6 +5,8 @@
  */
 package boletin29;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Bea
@@ -58,6 +60,17 @@ public class Yate extends Barco {
     @Override
     public void modulo() {
         alquiler=(float)(super.alquiler()+(precioPo*potencia)+(nCamarotes*precioCamarote));
+    }
+    @Override
+      public void factura (){
+        JOptionPane.showMessageDialog(null, "***FACTURA***\n"
+                + "Yate\n"
+                + "Alquiler: " + alquiler + "\n"
+                + "Longitud: " + longitud + "\n"
+                + "Matricula: " + matricula + "\n"
+                + "Numero de camarotes: " + nCamarotes + "\n"
+                + "Potencia: " + potencia + "\n"
+                + "***FIN FACTURA***");
     }
     
 

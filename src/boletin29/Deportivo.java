@@ -5,6 +5,8 @@
  */
 package boletin29;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Bea
@@ -39,5 +41,14 @@ public class Deportivo extends Barco {
     public void modulo() {
         alquiler=(float)(super.alquiler()+(precioPo*potencia));
     }
-    
+    @Override
+      public void factura (){
+        JOptionPane.showMessageDialog(null, "***FACTURA***\n"
+                + "Deportivo\n"
+                + "Alquiler: " + alquiler + "\n"
+                + "Longitud: " + longitud + "\n"
+                + "Matricula: " + matricula + "\n"
+                + "Potencia: " + potencia + "\n" 
+                + "***FIN FACTURA***");
+    }
 }
